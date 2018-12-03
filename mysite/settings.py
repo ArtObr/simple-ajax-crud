@@ -39,7 +39,7 @@ INSTALLED_APPS = [
 
     'widget_tweaks',
 
-    'mysite.books',
+    'mysite.bank',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +57,8 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'mysite/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'mysite/templates'),
+                 os.path.join(BASE_DIR, 'mysite/bank/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

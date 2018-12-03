@@ -1,16 +1,16 @@
-<form method="post" action="{% url 'book_update' form.instance.pk %}" class="js-book-update-form">
+<form method="post" action="{% url 'account_delete' account.id %}" class="js-book-delete-form">
   {% csrf_token %}
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
-    <h4 class="modal-title">Update book</h4>
+    <h4 class="modal-title">Confirm account deletion</h4>
   </div>
   <div class="modal-body">
-    {% include 'books/includes/partial_book_form.html' %}
+    <p class="lead">Are you sure you want to delete the account <strong>{{ account.number }}</strong>?</p>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    <button type="submit" class="btn btn-primary">Update book</button>
+    <button type="submit" class="btn btn-danger">Delete account</button>
   </div>
 </form>

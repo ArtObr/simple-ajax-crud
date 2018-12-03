@@ -1,12 +1,12 @@
 from django.conf.urls import url, include
 from django.views.generic import TemplateView
 
-from mysite.books import views
+from mysite.bank import views
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='home.html'), name='home'),
-    url(r'^books/$', views.book_list, name='book_list'),
-    url(r'^books/create/$', views.book_create, name='book_create'),
-    url(r'^books/(?P<pk>\d+)/update/$', views.book_update, name='book_update'),
-    url(r'^books/(?P<pk>\d+)/delete/$', views.book_delete, name='book_delete'),
+    url(r'^account/$', views.account_list, name='account_list'),
+    url(r'^account/create/$', views.account_create, name='account_create'),
+    url(r'^account/(?P<pk>\d+)/update/$', views.account_update, name='account_update'),
+    url(r'^account/(?P<pk>\d+)/delete/$', views.account_delete, name='account_delete'),
 ]

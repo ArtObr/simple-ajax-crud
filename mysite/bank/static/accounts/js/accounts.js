@@ -1,6 +1,6 @@
 $(function () {
 
-  /* Functions */
+  /* Funcs */
 
   var loadForm = function () {
     var btn = $(this);
@@ -27,7 +27,7 @@ $(function () {
       dataType: 'json',
       success: function (data) {
         if (data.form_is_valid) {
-          $("#book-table tbody").html(data.html_book_list);
+          $("#account-table tbody").html(data.html_account_list);
           $("#modal-book").modal("hide");
         }
         else {
@@ -46,11 +46,11 @@ $(function () {
   $("#modal-book").on("submit", ".js-book-create-form", saveForm);
 
   // Update book
-  $("#book-table").on("click", ".js-update-book", loadForm);
+  $("#account-table").on("click", ".js-update-book", loadForm);
   $("#modal-book").on("submit", ".js-book-update-form", saveForm);
 
   // Delete book
-  $("#book-table").on("click", ".js-delete-book", loadForm);
+  $("#account-table").on("click", ".js-delete-book", loadForm);
   $("#modal-book").on("submit", ".js-book-delete-form", saveForm);
 
 });
