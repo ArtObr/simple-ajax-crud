@@ -8,12 +8,12 @@
     <td>{{ account.owner_birth_date }}</td>
     <td style="width: 150px">
       <button type="button"
-              class="btn btn-warning btn-sm js-update-book"
+              class="btn btn-warning btn-sm js-update-account"
               data-url="{% url 'account_update' account.id %}">
         <span class="glyphicon glyphicon-pencil"></span> Edit
       </button>
       <button type="button"
-              class="btn btn-danger btn-sm js-delete-book"
+              class="btn btn-danger btn-sm js-delete-account"
               data-url="{% url 'account_delete' account.id %}">
         <span class="glyphicon glyphicon-trash"></span> Delete
       </button>
